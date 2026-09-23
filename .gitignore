@@ -1,4 +1,6 @@
-﻿nul
-*.exe
-*.out
-*.in
+*.exe 
+*.o 
+*.inp 
+*.out 
+push_code.bat 
+pull_code.bat 
