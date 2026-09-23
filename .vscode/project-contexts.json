@@ -1,0 +1,45 @@
+{
+  "contexts": {
+    "1776004601426": {
+      "id": "1776004601426",
+      "name": "ok",
+      "lastAccessed": "2026-04-12T14:36:46.892Z",
+      "layout": {
+        "editorGroups": [
+          {
+            "id": 2,
+            "position": {
+              "row": 0,
+              "column": 0
+            },
+            "size": 0.3333333333333333,
+            "files": [
+              {
+                "path": "i.inp",
+                "viewColumn": 2
+              }
+            ],
+            "activeFile": "i.inp"
+          },
+          {
+            "id": 3,
+            "position": {
+              "row": 0,
+              "column": 0
+            },
+            "size": 0.3333333333333333,
+            "files": [
+              {
+                "path": "o.out",
+                "viewColumn": 3
+              }
+            ],
+            "activeFile": "o.out"
+          }
+        ],
+        "activeGroup": 0,
+        "terminals": []
+      }
+    }
+  }
+}

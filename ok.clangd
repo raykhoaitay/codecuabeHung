@@ -1,0 +1,11 @@
+CompileFlags:
+  Add:
+    - -std=c++20          # Bạn có thể đổi thành c++17 hoặc c++23 tùy thích
+    - -I C:/msys64/ucrt64/include/c++/15.2.0
+    - -I C:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32
+    - -I C:/msys64/ucrt64/include/c++/15.2.0/backward
+    - -I C:/msys64/ucrt64/x86_64-w64-mingw32/include
+    - -I C:/msys64/ucrt64/include
+
+  # Giúp clangd hiểu tốt hơn khi dùng GCC headers
+  Compiler: g++

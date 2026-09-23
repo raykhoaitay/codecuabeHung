@@ -1,0 +1,56 @@
+IOI14_wall
+
+Jian-Jia đang xây một bức tường bằng cách xếp các viên gạch có cùng kích thước lại với nhau. Bức tường này gồm n cột gạch, được đánh số từ 0 đến n - 1 từ trái sang phải. Các cột có thể có chiều cao khác nhau (chiều cao của cột là số lượng viên gạch trong cột đó).
+
+Ban đầu, không có viên gạch nào ở bất kỳ cột nào. Jian-Jia thực hiện các giai đoạn thêm hoặc bớt gạch. Quá trình xây dựng hoàn thành khi tất cả k giai đoạn kết thúc. Trong mỗi giai đoạn, Jian-Jia được cho một đoạn các cột gạch liên tiếp và một chiều cao h:
+
+1. Trong giai đoạn thêm (adding phase): Jian-Jia thêm gạch vào các cột trong đoạn được cho mà có ít hơn h viên gạch, sao cho các cột đó có đúng h viên gạch. Ông không làm gì với các cột đã có từ h viên gạch trở lên.
+2. Trong giai đoạn bớt (removing phase): Jian-Jia lấy bớt gạch khỏi các cột trong đoạn được cho mà có nhiều hơn h viên gạch, sao cho các cột đó có đúng h viên gạch. Ông không làm gì với các cột có từ h viên gạch trở xuống.
+
+Nhiệm vụ của bạn là xác định hình dạng cuối cùng của bức tường (số lượng gạch trong từng cột sau khi hoàn thành tất cả k giai đoạn).
+
+ĐỊNH DẠNG HÀM CẦN CÀI ĐẶT:
+Hàm buildWall(n, k, op, left, right, height, finalHeight)
+
+Các tham số:
+
+* n: số lượng cột của bức tường.
+* k: số lượng giai đoạn.
+* op: mảng độ dài k; op[i] là loại của giai đoạn i (1 cho giai đoạn thêm gạch, 2 cho giai đoạn bớt gạch).
+* left và right: mảng độ dài k; đoạn cột trong giai đoạn i bắt đầu từ left[i] và kết thúc tại right[i] (bao gồm cả hai đầu mút, luôn có left[i] <= right[i]).
+* height: mảng độ dài k; height[i] là tham số chiều cao h của giai đoạn i.
+* finalHeight: mảng độ dài n; bạn cần trả về kết quả bằng cách ghi số lượng gạch cuối cùng của cột i vào finalHeight[i].
+
+RÀNG BUỘC VA SUBTASKS:
+Chiều cao height[i] của các giai đoạn là các số nguyên không âm không vượt quá 100,000.
+
+Subtask 1 (8 điểm): n <= 10,000; k <= 5,000
+Subtask 2 (24 điểm): n <= 200,000; k <= 500,000; tất cả các giai đoạn thêm gạch đều diễn ra trước tất cả các giai đoạn bớt gạch
+Subtask 3 (29 điểm): n <= 100,000; k <= 500,000
+Subtask 4 (39 điểm): n <= 2,000,000; k <= 500,000
+
+ĐỊNH DẠNG ĐẦU VÀO CỦA SAMPLE GRADER:
+
+* Dòng 1: n, k
+* Dòng 2..k+1: op[i], left[i], right[i], height[i]
+
+SAMPLE INPUT:
+10 6
+1 1 8 4
+2 4 9 1
+2 3 6 5
+1 0 5 3
+1 2 2 5
+2 6 7 0
+
+SAMPLE OUTPUT:
+3
+4
+5
+4
+1
+1
+0
+0
+4
+0

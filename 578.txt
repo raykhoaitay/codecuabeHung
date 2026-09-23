@@ -1,0 +1,36 @@
+Farmer John đang tìm cách thuê thầu phụ để giúp sắp xếp lại trang trại của mình, nhưng cho đến nay tất cả họ đều bỏ cuộc khi thấy chuỗi hướng dẫn phức tạp mà ông muốn họ làm theo. Tự mình hoàn thành dự án, ông nhận ra rằng quả thực mình đã làm cho dự án trở nên phức tạp hơn mức cần thiết. Hãy giúp ông làm theo các hướng dẫn để hoàn thành việc nâng cấp trang trại.
+
+Trang trại của Farmer John gồm N cánh đồng nằm trên một hàng, được đánh số thuận tiện từ 1...N. Mỗi cánh đồng có thể có một số lượng cuộn cỏ khô bất kỳ. Hướng dẫn của Farmer John gồm ba loại thao tác:
+
+1. Cho một khoảng cánh đồng liên tiếp, thêm một lượng cuộn cỏ khô mới vào mỗi cánh đồng trong khoảng đó.
+2. Cho một khoảng cánh đồng liên tiếp, xác định số lượng cuộn cỏ khô nhỏ nhất của một cánh đồng nằm trong khoảng đó.
+3. Cho một khoảng cánh đồng liên tiếp, tính tổng số cuộn cỏ khô có trong khoảng đó.
+
+ĐỊNH DẠNG ĐẦU VÀO (file haybales.in):
+
+* Dòng đầu tiên chứa hai số nguyên dương, N (1 <= N <= 200,000) và Q (1 <= Q <= 100,000).
+* Dòng tiếp theo chứa N số nguyên không âm (mỗi số không vượt quá 100,000), cho biết số lượng cuộn cỏ khô ban đầu ở mỗi cánh đồng.
+* Mỗi dòng trong Q dòng tiếp theo chứa một chữ cái in hoa (M, P hoặc S), theo sau là hai số nguyên dương A và B (1 <= A <= B <= N), hoặc ba số nguyên dương A, B, và C (1 <= A <= B <= N; 1 <= C <= 100,000). Dòng sẽ có ba số nguyên dương khi và chỉ khi chữ cái là P.
+* Nếu chữ cái là M, in ra số lượng cuộn cỏ khô nhỏ nhất trong khoảng cánh đồng từ A...B.
+* Nếu chữ cái là P, thêm C cuộn cỏ khô mới vào mỗi cánh đồng trong khoảng từ A...B.
+* Nếu chữ cái là S, in ra tổng số cuộn cỏ khô tìm thấy trong khoảng cánh đồng từ A...B.
+
+
+
+ĐỊNH DẠNG ĐẦU RA (file haybales.out):
+Một dòng đầu ra tương ứng với mỗi dòng lệnh 'M' hoặc 'S' trong hướng dẫn của Farmer John.
+
+SAMPLE INPUT:
+4 5
+3 1 2 4
+M 3 4
+S 1 3
+P 2 3 1
+M 3 4
+S 1 3
+
+SAMPLE OUTPUT:
+2
+6
+3
+8

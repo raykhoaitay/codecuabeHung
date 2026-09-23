@@ -1,0 +1,29 @@
+2166fi
+
+Cho một dãy gồm n số nguyên, nhiệm vụ của bạn là xử lý q truy vấn thuộc hai loại sau:
+
+1. 1 k u: Cập nhật giá trị tại vị trí k thành u.
+2. 2 a b: Tìm tổng tiền tố lớn nhất trong đoạn [a, b]. Có thể chọn tiền tố rỗng (tổng bằng 0).
+
+ĐỊNH DẠNG ĐẦU VÀO:
+
+* Dòng đầu tiên chứa hai số nguyên n và q (1 <= n, q <= 200,000): số lượng phần tử và số lượng truy vấn.
+* Dòng thứ hai chứa n số nguyên x1, x2, ..., xn (-10^9 <= xi <= 10^9): các giá trị ban đầu của dãy.
+* q dòng tiếp theo mô tả các truy vấn, mỗi dòng chứa ba số nguyên: "1 k u" hoặc "2 a b" (1 <= k <= n; -10^9 <= u <= 10^9; 1 <= a <= b <= n).
+
+ĐỊNH DẠNG ĐẦU RA:
+
+* In ra kết quả cho mỗi truy vấn loại 2 trên một dòng.
+
+SAMPLE INPUT:
+8 4
+1 2 -1 3 1 -5 1 4
+2 2 6
+1 4 -2
+2 2 6
+2 3 4
+
+SAMPLE OUTPUT:
+5
+2
+0

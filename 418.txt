@@ -1,0 +1,32 @@
+418
+
+Vào một ngày hè oi nóng, cô bò Bessie cảm thấy vô cùng lười biếng. Cô muốn chọn một vị trí đứng trên đồng cỏ sao cho có thể ăn được nhiều cỏ ngon nhất có thể mà chỉ cần di chuyển trong một khoảng cách ngắn.
+
+Có N cụm cỏ (1 <= N <= 100,000) trên đồng cỏ của Bessie. Cụm cỏ thứ i chứa g_i đơn vị cỏ (1 <= g_i <= 10,000) và nằm tại tọa độ phân biệt (x_i, y_i) với (0 <= x_i, y_i <= 1,000,000). Bessie muốn chọn một vị trí bắt đầu trên đồng cỏ (có thể trùng với vị trí của một cụm cỏ, và có thể là điểm có tọa độ không nguyên) sao cho tổng lượng cỏ nằm trong phạm vi K bước đi (1 <= K <= 2,000,000) tính từ vị trí này là lớn nhất.
+
+Khi Bessie đi 1 bước, cô di chuyển 1 đơn vị theo hướng bắc, nam, đông hoặc tây tính từ vị trí hiện tại (khoảng cách Manhattan). Ví dụ, để đi từ (0,0) đến (3,2) cần tổng cộng 5 bước. Bessie không bắt buộc phải đi các bước có độ dài nguyên -- ví dụ, 1 bước có thể chia thành nửa đơn vị về hướng bắc và nửa đơn vị về hướng đông.
+
+Hãy giúp Bessie xác định lượng cỏ tối đa mà cô có thể với tới nếu chọn được vị trí bắt đầu tối ưu nhất.
+
+ĐỊNH DẠNG ĐẦU VÀO (file lazy.in):
+
+* Dòng 1: Hai số nguyên N và K.
+* Dòng 2..1+N: Dòng i+1 mô tả cụm cỏ thứ i gồm 3 số nguyên: g_i, x_i, y_i.
+
+ĐỊNH DẠNG ĐẦU RA (file lazy.out):
+
+* Dòng 1: Lượng cỏ tối đa Bessie có thể với tới trong vòng K bước nếu cô chọn vị trí bắt đầu tốt nhất.
+
+SAMPLE INPUT:
+4 3
+7 8 6
+3 0 0
+4 6 0
+1 4 2
+
+SAMPLE OUTPUT:
+8
+
+GIẢI THÍCH VÍ DỤ:
+Bessie chấp nhận đi tối đa 3 bước từ vị trí xuất phát. Có 4 cụm cỏ. Cụm đầu tiên chứa 7 đơn vị cỏ tại (8,6), v.v.
+Nếu chọn vị trí đứng tại (3,0), các cụm cỏ tại (0,0), (6,0) và (4,2) đều nằm trong phạm vi khoảng cách K = 3 bước. Tổng lượng cỏ thu được là 3 + 4 + 1 = 8.

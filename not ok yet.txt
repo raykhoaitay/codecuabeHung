@@ -1,0 +1,8 @@
+CSES - 2182, 2185, 2417, 3396, 1142
+CF - 1089_2CT
+ATCODER - ABC366F 
+
+Kiến thức cần ôn tập thêm:
+- Hàm Mobius;
+- Sàng nguyên tố trên đoạn.
+- Tham lam (https://wiki.vnoi.info/algo/greedy-new)

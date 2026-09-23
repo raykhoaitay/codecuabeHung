@@ -1,0 +1,41 @@
+#include <bits/stdc++.h>
+#define int long long
+using namespace std;
+
+void ray(string name) {string inp = name + ".inp"; string out = name + ".out"; freopen(inp.c_str(), "r", stdin); freopen(out.c_str(), "w", stdout); }
+void ray(string inp = "i.inp", string out = "o.out") {freopen(inp.c_str(), "r", stdin);freopen(out.c_str(), "w", stdout);}
+
+int mod = 1000000007;
+
+signed main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    #ifndef ONLINE_JUDGE
+        ray();
+    #endif
+   
+    int n; cin >> n;
+    vector<int> a(n+1, 0);
+
+    for (int i = 0; i < n; ++i) cin >> a[i];
+    stack<int> st;
+    int h, w;
+    int maxx = -1e9;
+    st.push(0);
+    for (int i = 1; i <= n; ++i){
+        while (!st.empty() && a[i] < a[st.top()]){
+            int x = st.top();
+            st.pop();
+
+            h = a[x];
+            if (st.empty()) w = i;
+            else w = i - st.top() - 1;
+
+            maxx = max(maxx, h*w);
+        }
+        st.push(i);
+    }
+
+    cout << maxx;
+    return 0;
+}
