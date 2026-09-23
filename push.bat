@@ -49,9 +49,24 @@ REM 6. Push code len GitHub
 echo [*] Dang push code len GitHub...
 git push -u origin main
 
+REM Kiem tra neu push loi thi dung lai, khong xoa file
+if %errorlevel% neq 0 (
+    echo.
+    echo [!] CO LOI XAY RA KHI PUSH CODE!
+    echo [!] He thong se KHONG xoa file de bao ve an toan du lieu.
+    echo.
+    pause
+    exit
+)
+
+REM 7. Dọn dẹp thư mục sau khi push thành công
+echo.
+echo [*] Push code thanh cong! Dang don dep file local...
+del /q *.cpp *.exe 2>nul
+
 echo.
 echo =======================================================
-echo            DA PUSH CODE LEN GITHUB THANH CONG!
+echo       DA PUSH VA DON DEP FILE LOCAL THANH CONG!
 echo =======================================================
 echo.
 echo Bam phim bat ky de thoat...
